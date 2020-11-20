@@ -1,36 +1,29 @@
 
-![Python Script Convert PDF em TXT](/files/pdf-to-txt.jpg?raw=true "Title")
+# ![Python Script Convert PDF em TXT](/files/pdf-to-txt.jpg?raw=true "Title")
 
-## Script Convert PDF em TXT
+## Conversor de PDF para TXT
 
-pdf2txt.py - script simples em python para extrair textos de arquivo pdf em arquivo txt utilizando a biblioteca Ghostscript, Não funciona com pdf escaneado ou imagens.
+gs_convert.py - script simples em python para a utilização do Ghostscript como conversor de arquivos pdf para  arquivo de texto ou imagem.
 
 ## Requerimentos
 
 * Python 3.6
 * Ghostscript 9.53
-O sofware ghostscript deve estar acessível nas variaveis de ambiente do sistema operacional ou pode-se usar ghostscript portable dando referencia a pasta onde se encontra o executável do programa conforme o arquivo.
+Se o sofware ghostscript não estiver acessível nas variaveis de ambiente do sistema operacional pode-se usar um Ghostscript portable dando referencia a pasta onde se encontra o executável do programa conforme o arquivo.
 
-'''bash
-example_convert_pdf_to_txt.py
-'''
-## Como usar pdf2txt.py
+## Como usar
 
-verificar arquivo
-'''bash
-example_convert_pdf_to_txt.py
-'''
+verificar arquivo exemplo: "example_convert_pdf.py"
+
 ## Status do projeto
 
 Não terminado - refatorando código e ampliando recursos.
 
 ## Como contribuir para o projeto
 
-Obrigado por estar interessado em tornar este pacote melhor.
-Encorajamos todos a ajudar a melhorar este projeto com:
-novos recursos,
-testes e correções de bugs e problemas de desempenho,
-Sua ajuda é muito muito muito bem vinda!
+Se estiver interessado em tornar este pacote melhor,
+testes, correções de bugs e problemas de desempenho,
+Sua ajuda é muito bem vinda!
 
 ## Links
 
