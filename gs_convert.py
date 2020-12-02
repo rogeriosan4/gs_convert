@@ -1,6 +1,7 @@
 import os
 import platform
-
+from subprocess import check_output
+    
     
 #path for portable ghostscript
 #(if ghostscript command is not in the path of environment variables)
@@ -28,3 +29,7 @@ def pdf2png(file_in, file_out=None):
     gs_command = '{} -sDEVICE=png16m -sOutputFile="{}" -q -dNOPAUSE -dBATCH {}'.format(__gs__(), file_out, file_in)
     os.system(gs_command)
     
+def pdf2string(file_in):
+    file_in = os.path.abspath(file_in)
+    gs_command = '{} -sDEVICE=txtwrite -sOutputFile=- -q -dNOPAUSE -dBATCH {}'.format(__gs__(), file_in)
+    return check_output([gs_command], shell=True).decode('utf-8')
