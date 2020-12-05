@@ -19,17 +19,17 @@ def pdf2txt(file_in, file_out=None):
     file_in = os.path.abspath(file_in)
     if not file_out:
         file_out = file_in.split('.pdf')[0]+'%03d.txt'
-    gs_command = '{} -sDEVICE=txtwrite -sOutputFile={} -q -dNOPAUSE -dBATCH {}'.format(__gs__(), file_out, file_in)
+    gs_command = '{} -sDEVICE=txtwrite -sOutputFile="{}" -q -dNOPAUSE -dBATCH "{}"'.format(__gs__(), file_out, file_in)
     os.system(gs_command)
 
 def pdf2png(file_in, file_out=None):
     file_in = os.path.abspath(file_in)
     if not file_out:
         file_out = file_in.split('.pdf')[0]+'%03d.png'
-    gs_command = '{} -sDEVICE=png16m -sOutputFile="{}" -q -dNOPAUSE -dBATCH {}'.format(__gs__(), file_out, file_in)
+    gs_command = '{} -sDEVICE=png16m -sOutputFile="{}" -q -dNOPAUSE -dBATCH "{}"'.format(__gs__(), file_out, file_in)
     os.system(gs_command)
     
 def pdf2string(file_in):
     file_in = os.path.abspath(file_in)
-    gs_command = '{} -sDEVICE=txtwrite -sOutputFile=- -q -dNOPAUSE -dBATCH {}'.format(__gs__(), file_in)
-    return check_output([gs_command], shell=True).decode('utf-8')
+    gs_command = '{} -sDEVICE=txtwrite -sOutputFile=- -q -dNOPAUSE -dBATCH "{}"'.format(__gs__(), file_in)
+    return check_output([gs_command], shell=True).decode("utf-8", errors="ignore")
