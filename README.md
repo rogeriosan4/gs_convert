@@ -9,7 +9,7 @@ gs_convert.py - script simples em python para a utilização do Ghostscript como
 
 * Python 3.6
 * Ghostscript 9.53
-Se o sofware ghostscript não estiver acessível nas variaveis de ambiente do sistema operacional pode-se usar um Ghostscript portable dando referencia a pasta onde se encontra o executável do programa conforme o arquivo.
+Se o sofware ghostscript não estiver nas variaveis de ambiente do sistema operacional, use Ghostscript portable dando a referencia do caminho da pasta onde se encontra o executável do programa para "gs_convet.PORTABLE_ENGINE".
 
 ## Como usar
 
