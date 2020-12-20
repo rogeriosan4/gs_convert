@@ -21,6 +21,9 @@ gs_convet.PORTABLE_ENGINE = 'C:/Users/<username>/Downloads/CommonFiles/Ghostscri
 ## Como usar
 
 ```sh
+import gs_convert as gs
+
+
 # chamada opcional para a biblioteca portátil, se você não tiver o ghostscript reconhecido nas variáveis de ambiente [PATH]
 gs_portable_path_example = 'C:/Users/<username>/Downloads/CommonFiles/Ghostscript/bin/gswin64c'
 gs.PORTABLE_ENGINE = gs_portable_path_example
